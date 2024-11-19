@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Receta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .ingredient-group {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Receta</h2>
+    <form id="recipeForm">
+        <label for="recipeName">Nombre de la receta</label>
+        <input type="text" id="recipeName" name="recipeName" required>
+
+        <div id="ingredientContainer">
+            <div class="ingredient-group">
+                <label for="ingredient1">Ingrediente 1</label>
+                <input type="text" id="ingredient1" name="ingredient[]" placeholder="Ingrediente" required>
+                <input type="number" id="quantity1" name="quantity[]" placeholder="Cantidad" required>
+            </div>
+        </div>
+
+        <button type="button" onclick="addIngredient()">Agregar otro ingrediente</button>
+
+        <button type="submit">Registrar receta</button>
+    </form>
+</div>
+
+<script>
+    let ingredientCount = 1;
+
+    function addIngredient() {
+        ingredientCount++;
+        const ingredientContainer = document.getElementById('ingredientContainer');
+        
+        const ingredientGroup = document.createElement('div');
+        ingredientGroup.classList.add('ingredient-group');
+        ingredientGroup.innerHTML = `
+            <label for="ingredient${ingredientCount}">Ingrediente ${ingredientCount}</label>
+            <input type="text" id="ingredient${ingredientCount}" name="ingredient[]" placeholder="Ingrediente" required>
+            <input type="number" id="quantity${ingredientCount}" name="quantity[]" placeholder="Cantidad" required>
+        `;
+        
+        ingredientContainer.appendChild(ingredientGroup);
+    }
+
+    document.getElementById('recipeForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const recipeName = document.getElementById('recipeName').value;
+        const ingredients = [];
+        const quantities = [];
+
+        document.querySelectorAll('[name="ingredient[]"]').forEach((input, index) => {
+            ingredients.push(input.value);
+            quantities.push(document.querySelectorAll('[name="quantity[]"]')[index].value);
+        });
+
+        alert(`Receta registrada: ${recipeName}\nIngredientes: ${ingredients.join(', ')}\nCantidades: ${quantities.join(', ')}`);
+    });
+
+</script>
+<?php
+    include("registro2.php");
+    ?>
+</body>
+</html>
