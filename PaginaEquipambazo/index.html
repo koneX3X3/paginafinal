@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/item.png">
+    <title>Coci Fácil</title>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="logo">Coci Fácil</div>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Recetas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="recetas-relevantes.html">Recetas Veganas</a></li>
+                    <li><a href="recetas-favoritas.html">Recetas Favoritas</a></li>
+                    <li><a href="recetasdeTemporada.html">Recetas de Temporada</a></li>
+                </ul>
+            </li>
+            <li><a href="iniciosesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Buscador debajo del menú -->
+    <div class="cajabuscar">
+        <form method="get" id="buscarform">
+            <input type="text" id="s" placeholder="Buscar...">
+            <button type="button" class="button" onclick="limpiarBusqueda()">🔍</button>
+        </form>
+    </div>
+
+    <!-- Encabezado principal -->
+    <header class="content header">
+        <h1 class="title">Aprendiendo y conociendo los sabores del mundo</h1>
+        <p>CociFacil es una página destinada para los amantes de la gastronomía, así como también a estudiantes que estudien este cambio gastronómico. En ella encontrarás recetas variadas, aprenderás con ella y también si así "Tu" lo deseas compartir tus propias recetas, con la finalidad de que todos en ella aprendan unos con otros. Bienvenido a esta página de cocina, diviértete, aprende y sobre todo se respetuoso con los demás usuarios. </p>
+    </header>
+
+    <!-- Sección de recetas -->
+    <section class="content sau">
+        <h2 class="title">Las Recetas mas favoritas de la semana</h2>
+        <div class="box-container">
+            <div class="box">
+                <i class="fab fa-angular"></i>
+                <h3>Pozole</h3>
+                <img src="img/pozole.png">
+                <p>Es un caldo espeso a base de maíz hominy (maíz nixtamalizado) y carne (generalmente de cerdo o pollo). Se sirve con rábanos, cebolla, orégano, chile en polvo, lechuga y tostadas.</p>
+            </div>
+            <div class="box">
+                <i class="fab fa-apple"></i>
+                <h3>Chiles en Nogada</h3>
+                <img src="img/chile.jpg">
+                <p>Chiles poblanos rellenos de un picadillo de carne de res y cerdo, bañados en una salsa de nuez (nogada), y decorados con granada. Es un platillo tradicional de las fiestas patrias.</p>
+            </div>
+            <div class="box">
+                <i class="fab fa-android"></i>
+                <h3>Mole</h3>
+                <img src="img/mole.png">
+                <p>Es una salsa compleja hecha con chiles, chocolate, especias y otros ingredientes, servida sobre pollo o carne.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penúltima sección -->
+    <section class="content about">
+        <h2 class="title">Recetas del Mundo más preferidas</h2>
+        <p>Las personas buscan nuevas formas de cocinar, salir de su zona de confort, y estas son algunas de las recetas más buscadas a nivel mundial.</p>
+        <div class="box-container2">
+            <div class="box">
+                <img src="img/piza.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <h4>Ingredientes:</h4>
+                <p>Masa de pizza, salsa de tomate, queso mozzarella, ingredientes al gusto (pepperoni, jamón, pimientos, etc.)</p> 
+                <h5>Preparación:</h5>
+                <p>Extiende la masa, agrega la salsa, el queso y los toppings. Hornea a 220°C por 10-15 minutos hasta que la masa esté dorada y el queso derretido.</p> 
+            </div>
+            <div class="box">
+                <img src="img/sushi.png" alt="Sushi">
+                <h3>Sushi</h3>
+                <h4>Ingredientes:</h4>
+                <p>Arroz para sushi, vinagre de arroz, pescado crudo (atún, salmón), alga nori, aguacate, pepino.</p> 
+                <h5>Preparación:</h5>
+                <p>Cocina el arroz con vinagre y azúcar. Coloca el arroz sobre el nori, agrega pescado y vegetales, y enrolla. Se puede servir con salsa de soya y wasabi.</p> 
+            </div>
+            <div class="box">
+                <img src="img/tacos.png" alt="Tacos">
+                <h3>Tacos</h3>
+                <h4>Ingredientes:</h4>
+                <p>Tortillas de maíz o harina, carne (pollo, cerdo, carne asada), cebolla, cilantro, salsa.</p> 
+                <h5>Preparación:</h5>
+                <p>Cocina la carne al gusto y calienta las tortillas. Sirve la carne en las tortillas y agrega los acompañamientos como cebolla, cilantro y salsa.</p> 
+            </div>
+        <div class="box">
+            <img src="img/hamburguesa.jpg" alt="Hamburguesa">
+            <h3>Hamburguesas</h3>
+            <h4>Ingredientes:</h4>
+            <p>Pan de hamburguesa, carne molida, queso, lechuga, tomate, cebolla, salsa.</p> 
+            <h5>Preparación:</h5>
+            <p>Cocina la carne a la parrilla o en sartén, coloca el queso sobre la carne caliente para derretirlo. Sirve en un pan con lechuga, tomate, cebolla y salsa al gusto.</p> 
+        </div>
+        <div class="box">
+            <img src="img/paella.jpg" alt="Paella">
+            <h3>Paella</h3>
+            <h4>Ingredientes:</h4>
+            <p> Arroz, mariscos (gambas, calamares), pollo, conejo, pimientos, guisantes, caldo, azafrán.</p> 
+            <h5>Preparación:</h5>
+            <p>Sofríe los ingredientes (pollo, conejo, mariscos), agrega el arroz, el caldo y el azafrán. Cocina a fuego lento hasta que el arroz esté hecho y el líquido se haya absorbido.</p> 
+        </div>
+        <div class="box">
+            <img src="img/pasta.jpg" alt="Pasta Carbonara">
+            <h3>Pasta Carbonara</h3>
+            <h4>Ingredientes:</h4>
+            <p>Espaguetis, huevos, panceta, queso parmesano, pimienta.</p> 
+            <h5>Preparación:</h5>
+            <p>Cocina los espaguetis. En una sartén, fríe la panceta. Bate los huevos con el queso y mezcla con la pasta caliente y panceta. Añade pimienta al gusto.</p> 
+            
+        </div>
+        <div class="box">
+            <img src="img/curry.jpg" alt="Curry">
+            <h3>Curry</h3>
+            <h4>Ingredientes:</h4>
+            <p>Pollo o vegetales, cebolla, ajo, jengibre, especias (curry, cúrcuma, comino), leche de coco, arroz.</p> 
+            <h5>Preparación:</h5>
+            <p>Sofríe cebolla, ajo y jengibre. Agrega las especias y la carne o vegetales. Cocina con leche de coco hasta que los sabores se integren. Sirve con arroz.</p> 
+            
+        </div>
+        <div class="box">
+            <img src="img/biryanii.png" alt="Biryani">
+            <h3>Biryani</h3>
+            <h4>Ingredientes:</h4>
+            <p>Arroz, pollo o cordero, cebolla, yogur, especias (cardamomo, comino, azafrán).</p> 
+            <h5>Preparación</h5>
+            <p> Cocina la carne con especias, cebolla y yogur. En una olla separada, cocina el arroz con algunas especias. Combina ambos y deja reposar para que los sabores se mezclen.</p> 
+            
+        </div>
+        <div class="box">
+            <img src="img/ramen.jpg" alt="Ramen">
+            <h3>Ramen</h3>
+            <h4>Ingredientes:</h4>
+            <p>Fideos de ramen, caldo (pollo, cerdo, o miso), huevo cocido, cebollín, alga nori, carne (cerdo o pollo).</p> 
+            <h5>Preparación:</h5>
+            <p>Cocina los fideos y prepara el caldo. Sirve los fideos en un bol con el caldo caliente, agrega carne, huevo, cebollín y nori.</p> 
+            
+        </div>
+        <div class="box">
+            <img src="img/cuerno.jpg" alt="Croissant">
+            <h3>Croissant</h3>
+            <h4>Ingredientes:</h4>
+            <p> Harina, mantequilla, levadura, azúcar, sal, leche.</p> 
+            <h5>Preparación:</h5>
+            <p> Mezcla los ingredientes para hacer la masa. Deja reposar y luego forma el croissant. Deja que la masa fermente y hornea a 180°C hasta que esté dorada.</p> 
+            
+        </div>
+    
+    </section>
+    
+
+    <!-- Última sección de contacto -->
+    <section class="content contact">
+        <h2 class="title">Contacto</h2>
+        <div class="footer-section">
+            <div>
+                <p>Para cualquier duda o fallas, puedes contactarnos por los siguientes medios:</p>
+                <p>Correo: uamemex_cocifacil@gmail.com</p>
+                <p>Correo Directo: Cocifacil.sazon@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function limpiarBusqueda() {
+            document.getElementById('s').value = '';
+        }
+    </script>
+</body>
+</html>

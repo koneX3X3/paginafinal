@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleregistro.css">
+    <link rel="icon" href="img/item.png"> 
+    <title>Coci Fácil</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Registrarse</h1>
+        <form id="formulario" onsubmit="registrarCuenta(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required />
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <label for="cont1">Contraseña:</label>
+            <input type="password" id="cont1" name="cont1" required />
+
+            <label for="cont2">Confirmar Contraseña:</label>
+            <input type="password" id="cont2" name="cont2" required />
+
+            <div class="mostrar-contraseña">
+                <input type="checkbox" id="mostrar" onclick="mostrarContraseñas()">
+                <label for="mostrar">Mostrar Contraseñas</label>
+            </div>
+            <input type="submit" value="Crear Cuenta">
+        </form>
+    </div>
+
+    <script>
+        function mostrarContraseñas() {
+            var cont1 = document.getElementById("cont1");
+            var cont2 = document.getElementById("cont2");
+            var checkbox = document.getElementById("mostrar");
+
+            if (checkbox.checked) {
+                cont1.type = "text";
+                cont2.type = "text";
+            } else {
+                cont1.type = "password";
+                cont2.type = "password";
+            }
+        }
+
+        function registrarCuenta(event) {
+            event.preventDefault(); // Prevenir el envío normal del formulario
+
+            // Validar las contraseñas
+            var cont1 = document.getElementById("cont1").value;
+            var cont2 = document.getElementById("cont2").value;
+            
+            if (cont1 !== cont2) {
+                alert("Las contraseñas no coinciden. Intentalo de nuevo.");
+                return; // Si las contraseñas no coinciden, no hacemos nada más
+            }
+
+            // Mostrar mensaje de éxito
+            alert("¡Ya se creo su cuenta correctamente!");
+
+            // Redirigir al inicio de la página después de un pequeño retraso
+            setTimeout(function () {
+                window.location.href = "index.html"; // Redirige a la página de inicio
+            }, 1000); // Retraso de 1 segundo
+        }
+    </script>
+</body>
+
+</html>

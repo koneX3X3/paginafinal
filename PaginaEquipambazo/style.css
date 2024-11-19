@@ -1,0 +1,161 @@
+@charset "utf-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.header {  
+    text-align: center; /* Centrar horizontalmente */
+    padding: 20px 0; /* Espaciado vertical */
+    background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.header .title {
+    font-size: 28px; /* Tamaño del texto */
+    color: #2C3E50; /* Color del texto */
+    margin: 0; /* Elimina márgenes */
+}
+
+/* Menú de navegación */
+.navbar {
+    background-color: #2C3E50;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Necesario para que el submenú se posicione correctamente */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block; 
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    color: #f1c40f;
+    background-color: #34495e;
+}
+
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    padding: 0; 
+    z-index: 1000; 
+    animation: slide-down 0.3s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    color: white; /* Color del texto del submenú */
+    padding: 10px 15px; /* Ajusta el padding para reducir el espacio vacío */
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    min-width: 80%; /* Asegura que el enlace abarque todo el recuadro */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Buscador */
+.cajabuscar {
+    margin: 20px;
+    text-align: center;
+}
+
+.cajabuscar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cajabuscar .button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sau, .about, .contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.box-container, .box-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.box img {
+    width: 100px;
+    height: 100px; 
+    margin-bottom: 10px;
+    border-radius: 50%; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    object-fit: cover; 
+    border: 2px solid #34495e; 
+}
+
+.box img:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); 
+}
